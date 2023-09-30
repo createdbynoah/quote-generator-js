@@ -25,6 +25,7 @@ body {
   max-width: 900px;
   padding: 20px 30px;
   border-radius: 20px;
+  padding-bottom: 30px;
   background-color: rgba(0, 30, 29, 0.4);
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
@@ -45,7 +46,7 @@ body {
 }
 
 .quote-author {
-  margin-top: 15px;
+  margin-top: 35px;
   font-size: 1.5rem;
   font-family: Montserrat, sans-serif;
   font-weight: 400;
@@ -54,7 +55,7 @@ body {
 }
 
 .button-container {
-  margin-top: 15px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
 }
@@ -64,7 +65,7 @@ button {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1rem;
-  height: 2.5rem;
+  /* height: 2.5rem; */
   border: none;
   border-radius: 10px;
   color: #001e1d;
@@ -85,12 +86,8 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
-.twitter-button:hover {
-  color: #38a1f3;
-}
-
-.fa-twitter {
-  font-size: 1.5rem;
+.fa-arrow-up-from-bracket {
+  font-size: 1.2rem;
 }
 
 /* Media Query: Tablet or Smaller */

@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
@@ -20,24 +21,35 @@
       <!-- Quote -->
       <div class="quote-text">
         <i class="fas fa-quote-left"></i>
-        <span id="quote"
-          >What you are is what you have been. What you'll be is what you do
-          now.</span
-        >
+        <span id="quote"></span>
       </div>
       <!-- Author -->
       <div class="quote-author">
-        <span id="author">Buddha</span>
+        <span id="author"></span>
       </div>
       <!-- Buttons -->
       <div class="button-container">
-        <button class="twitter-button" id="twitter" title="Tweet this!">
-          <i class="fab fa-twitter"></i>
+        <button class="share-button" id="share" title="Share this!">
+          <i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i>
         </button>
         <button class="new-quote" id="new-quote">New Quote</button>
       </div>
     </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <div class="modal-text">
+          <h2>Share this quote</h2>
+          <button><i class="fa-brands fa-facebook"></i></button>
+          <button><i class="fa-brands fa-linkedin"></i></button>
+          <button><i class="fa-solid fa-copy"></i></button>
+        </div>
+      </div>
+    </div>
     <!-- Script -->
+    <script src="modal.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
