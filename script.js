@@ -2,7 +2,7 @@
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
-const twitterBtn = document.getElementById('twitter');
+const shareBtn = document.getElementById('share');
 const newQuoteBtn = document.getElementById('new-quote');
 
 let apiQuotes = [];
@@ -39,3 +39,26 @@ async function getQuotes() {
 
 // On Load
 getQuotes();
+
+newQuoteBtn.addEventListener('click', () => newQuote());
+
+// copy to clipboard
+const copyButton = document.getElementById('copyBtn');
+const toastText = document.getElementById('toast');
+copyButton.addEventListener('click', async function () {
+  try {
+    toastText.classList.remove('toast-exit');
+    const textToCopy =
+      '"' + quoteText.textContent + '"' + '\n- ' + authorText.textContent;
+    await navigator.clipboard.writeText(textToCopy);
+    toastText.textContent = 'Copied to clipboard!';
+    setTimeout(() => {
+      toastText.classList.add('toast-exit');
+      setTimeout(() => {
+        toastText.textContent = '';
+      }, 280);
+    }, 2500);
+  } catch (error) {
+    console.log('unable to copy text: ', error);
+  }
+});

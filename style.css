@@ -64,7 +64,7 @@ button {
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 1.3rem;
   /* height: 2.5rem; */
   border: none;
   border-radius: 10px;
@@ -87,7 +87,7 @@ button:active {
 }
 
 .fa-arrow-up-from-bracket {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 /* Media Query: Tablet or Smaller */

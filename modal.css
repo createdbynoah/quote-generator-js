@@ -25,6 +25,10 @@
   animation: slideIn 0.3s ease-in-out;
 }
 
+.modal-buttons {
+  margin-top: 25px;
+}
+
 .modal-text {
   margin: 30px 20px;
 }
@@ -32,6 +36,7 @@
 .modal-text h2 {
   color: #004643;
   font-size: 3rem;
+  margin-bottom: 15px;
 }
 
 .modal-text button {
@@ -43,6 +48,17 @@
 
 .modal-text button:active {
   box-shadow: 0 0.1rem rgba(171, 209, 198, 0.65);
+}
+
+#toast {
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-style: italic;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#toast.toast-exit {
+  animation: fadeOut 0.3s ease-in-out;
 }
 
 /* Close Button */

@@ -2,6 +2,7 @@
 const modal = document.getElementById('myModal');
 const openBtn = document.getElementById('share');
 const closeBtn = document.getElementById('closeModalBtn');
+const toast = document.getElementById('toast');
 
 // Open the modal
 openBtn.onclick = function () {
@@ -13,6 +14,7 @@ function closeModal() {
   setTimeout(function () {
     modal.style.display = 'none';
     modal.style.animation = ''; // Reset animation for future use
+    toast.textContent = '';
   }, 280);
 }
 
