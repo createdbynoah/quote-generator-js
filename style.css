@@ -16,6 +16,15 @@ body {
   font-weight: 400;
   text-align: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -87,6 +96,24 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 1.4rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #abd1c6;
+  margin: 0 0.3em;
+}
+
+footer a:hover {
+  color: #f9bc60;
+  cursor: pointer;
+}
+
 /* Loader */
 .loader {
   width: 84px;
@@ -115,10 +142,22 @@ button:active {
   }
 
   .quote-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    padding-bottom: 60px;
+  }
+
+  .quote-author {
+    font-size: 0.9rem;
   }
 
   .long-quote {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }

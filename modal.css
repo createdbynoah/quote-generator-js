@@ -86,8 +86,10 @@
   .modal-text button {
     display: block;
     width: 100%;
+    margin-left: 0;
     margin-bottom: 20px;
     padding: 0.5rem 1.8rem;
+    font-size: 1.3rem;
   }
 }
 

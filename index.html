@@ -18,47 +18,62 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
   </head>
   <body>
-    <div class="quote-container" id="quote-container">
-      <!-- Quote -->
-      <div class="quote-text">
-        <i class="fas fa-quote-left"></i>
-        <span id="quote"></span>
+    <main>
+      <div class="quote-container" id="quote-container">
+        <!-- Quote -->
+        <div class="quote-text">
+          <i class="fas fa-quote-left"></i>
+          <span id="quote"></span>
+        </div>
+        <!-- Author -->
+        <div class="quote-author">
+          <span id="author"></span>
+        </div>
+        <!-- Buttons -->
+        <div class="button-container">
+          <button class="share-button" id="share" title="Share this!">
+            <i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i>
+          </button>
+          <button class="new-quote" id="new-quote">
+            <i class="fa-solid fa-arrows-rotate"></i>
+          </button>
+        </div>
       </div>
-      <!-- Author -->
-      <div class="quote-author">
-        <span id="author"></span>
-      </div>
-      <!-- Buttons -->
-      <div class="button-container">
-        <button class="share-button" id="share" title="Share this!">
-          <i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i>
-        </button>
-        <button class="new-quote" id="new-quote">
-          <i class="fa-solid fa-arrows-rotate"></i>
-        </button>
-      </div>
-    </div>
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close" id="closeModalBtn">&times;</span>
-        <div class="modal-text">
-          <h2>Share this quote</h2>
-          <p id="toast"></p>
-          <div class="modal-buttons">
-            <!-- <button id="facebookBtn">
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" id="closeModalBtn">&times;</span>
+          <div class="modal-text">
+            <h2>Share this quote</h2>
+            <p id="toast"></p>
+            <div class="modal-buttons">
+              <!-- <button id="facebookBtn">
               <i class="fa-brands fa-facebook"></i>
             </button>
             <button id="linkedInBtn">
               <i class="fa-brands fa-linkedin"></i>
             </button> -->
-            <button id="copyBtn"><i class="fa-solid fa-copy"></i></button>
+              <button id="copyBtn"><i class="fa-solid fa-copy"></i></button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="loader" id="loader"></div>
+      <div class="loader" id="loader"></div>
+    </main>
+    <footer class="footer">
+      <div class="contact-info">
+        <a href="https://github.com/createdbynoah" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/noahrodgers10/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.createdbynoah.com/" target="_blank"
+          ><i class="fa-solid fa-link"></i
+        ></a>
+      </div>
+    </footer>
     <!-- Script -->
     <script src="modal.js"></script>
     <script src="script.js"></script>
