@@ -115,6 +115,10 @@ button:active {
   }
 
   .quote-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .long-quote {
+    font-size: 1.4rem;
   }
 }
