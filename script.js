@@ -1,4 +1,3 @@
-// https://jacintodesign.github.io/quotes-api/data/quotes.json
 const quoteContainer = document.getElementById('quote-container');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
@@ -81,5 +80,3 @@ copyButton.addEventListener('click', async function () {
 
 // On Load
 getQuotes();
-// loading();
-// complete();
