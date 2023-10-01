@@ -44,6 +44,7 @@
   /* height: 3rem; */
   padding: 0.8rem 2rem;
   margin: 0 12px;
+  box-shadow: 0 0.3rem rgba(0, 70, 67, 0.65);
 }
 
 .modal-text button:active {

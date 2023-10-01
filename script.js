@@ -4,11 +4,26 @@ const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const shareBtn = document.getElementById('share');
 const newQuoteBtn = document.getElementById('new-quote');
+const linkedInBtn = document.getElementById('linkedInBtn');
+const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
+// Show Loading
+function loading() {
+  loader.style.display = 'inline-block';
+  quoteContainer.hidden = true;
+}
+
+// Hide Loading
+function complete() {
+  loader.style.display = 'none';
+  quoteContainer.hidden = false;
+}
+
 //  Show New Quote
 function newQuote() {
+  loading();
   // pick a random quote from apiQuotes array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
   // Check if author is null
@@ -22,11 +37,14 @@ function newQuote() {
   } else {
     quoteText.classList.remove('long-quote');
   }
+  //   Set Quote, Hide Loader
   quoteText.textContent = quote.text;
+  complete();
 }
 
 // Get Quotes From API
 async function getQuotes() {
+  loading();
   const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
   try {
     const response = await fetch(apiUrl);
@@ -37,12 +55,10 @@ async function getQuotes() {
   }
 }
 
-// On Load
-getQuotes();
+// Event Listeners
+newQuoteBtn.addEventListener('click', newQuote);
 
-newQuoteBtn.addEventListener('click', () => newQuote());
-
-// copy to clipboard
+// Copy to clipboard
 const copyButton = document.getElementById('copyBtn');
 const toastText = document.getElementById('toast');
 copyButton.addEventListener('click', async function () {
@@ -62,3 +78,8 @@ copyButton.addEventListener('click', async function () {
     console.log('unable to copy text: ', error);
   }
 });
+
+// On Load
+getQuotes();
+// loading();
+// complete();

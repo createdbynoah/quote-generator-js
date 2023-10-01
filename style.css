@@ -58,13 +58,14 @@ body {
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
+  padding: 0px 20px 10px 20px;
 }
 
 button {
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   /* height: 2.5rem; */
   border: none;
   border-radius: 10px;
@@ -86,8 +87,25 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
-.fa-arrow-up-from-bracket {
-  font-size: 1.5rem;
+/* Loader */
+.loader {
+  width: 84px;
+  height: 84px;
+  border: 10px solid #fffffe;
+  border-bottom-color: #f9bc60;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Media Query: Tablet or Smaller */
